@@ -1,0 +1,240 @@
+/* Import fonts */
+
+@font-face {
+    font-family: "lora";
+    src: url(../fonts/lora/Lora-Regular.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "workSans";
+    src: url(../fonts/workSans/WorkSans-Regular.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: "lora", 'Times New Roman', Times, serif; 
+}
+
+p, a {
+    font-family: "workSans", sans-serif;
+}
+
+/* Header */
+
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div {
+    width: 50%;
+    text-align: center;
+}
+
+header div h1:nth-of-type(1) {
+    font-size: 4.5rem;
+    margin-bottom: 25px;
+    letter-spacing: 7.5px;
+}
+
+header div h1:nth-of-type(2) {
+    font-size: 1.25rem;
+    letter-spacing: 2.5px;
+}
+
+header img {
+    width: 50%;
+}
+
+/* Navigation */
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #2e2e2e;
+}
+
+.main-nav img {
+    margin-right: auto;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 3vw;
+    padding: 10px 20px;
+}
+
+.main-nav a:hover {
+    color: #2e2e2e;
+    background-color: #fff;
+}
+
+.sticky {
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+/* Main */
+
+.story {
+    display: flex;
+    align-items: center;
+    background-color: #2e2e2e;
+    padding: 15vh 0;
+}
+
+.story img {
+    width: 50%;
+}
+
+.story article {
+    color: #fff;
+    width: 50%;
+    padding: 0 2vw;
+}
+
+.story article h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.story article p {
+    margin: 30px 0;
+}
+
+.featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 2vh;
+    padding-top: 100px;
+}
+
+.featured p {
+    margin-bottom: 10vh;
+}
+
+.featured div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.featured div figure {
+    width: 30%;
+}
+
+.featured div figure img {
+    width: 100%;
+}
+
+.featured div figure figcaption {
+    text-align: center;
+    color: #2e2e2e;
+    margin-bottom: 7.5vh;
+}
+
+.contact {
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 10vh 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact article {
+    width: 45%;
+}
+
+.contact article p:nth-of-type(2) {
+    line-height: 1.5;
+}
+
+.contact article h2 {
+    margin-bottom: 3vh;
+}
+
+.contact article p {
+    margin-bottom: 3vh;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.contact form div {
+    width: 60%;
+}
+
+.contact form label {
+    display: inline-block;
+    width: 100%;
+}
+
+.contact form input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact form button {
+    padding: 2.5px 10px;
+    width: 20%;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d2c2f;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+footer p {
+    width: 30%;
+}
+
+footer p:nth-of-type(2) {
+    text-align: center;
+}
+
+footer nav {
+    width: 30%;
+    text-align: right;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
