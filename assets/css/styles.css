@@ -45,13 +45,13 @@ header div {
 }
 
 header div h1:nth-of-type(1) {
-    font-size: 4.5rem;
+    font-size: 5vw;
     margin-bottom: 25px;
     letter-spacing: 7.5px;
 }
 
 header div h1:nth-of-type(2) {
-    font-size: 1.25rem;
+    font-size: 2vw;
     letter-spacing: 2.5px;
 }
 
@@ -101,6 +101,7 @@ header img {
 
 .story img {
     width: 50%;
+    padding-top: 100px;
 }
 
 .story article {
@@ -125,6 +126,7 @@ header img {
     justify-content: center;
     align-items: center;
     padding: 10vh 0;
+    background-color: #fff;
 }
 
 .featured h2 {
@@ -156,6 +158,27 @@ header img {
     margin-bottom: 7.5vh;
 }
 
+/* Responsive iframe */
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 .contact {
     background-color: #2e2e2e;
     color: #fff;
@@ -166,6 +189,7 @@ header img {
 
 .contact article {
     width: 45%;
+    padding-left: 50px;
 }
 
 .contact article p:nth-of-type(2) {
@@ -184,10 +208,11 @@ header img {
     display: flex;
     flex-direction: column;
     width: 45%;
+    padding-left: 50px;
 }
 
 .contact form div {
-    width: 60%;
+    width: 80%;
 }
 
 .contact form label {
@@ -237,4 +262,146 @@ footer nav a {
 
 footer nav a:hover {
     text-decoration: underline;
+}
+
+/* Responsive for smartphones */
+
+@media only screen and (max-width: 576px) {
+
+    /* Header */
+
+    header {
+        flex-direction: column;
+    }
+
+    header div {
+        width: 100%;
+    }
+
+    header div h1:nth-of-type(1) {
+        font-size: 40px;
+        padding-top: 20px;
+    }
+
+    header div h1:nth-of-type(2) {
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    /* Navigation */
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .main-nav img {
+        padding-top: 20px;
+    }
+
+    .sticky {
+        position: static;
+    }
+
+/* Main */
+
+    .story {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .story img {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .story article {
+        width: 100%;
+        padding: 0;
+    }
+
+    .story article h2 {
+        padding-top: 20px;
+    }
+
+    .story article p {
+        padding: 0 10px;
+    }
+
+    .featured {
+        padding: 0;
+    }
+
+    .featured h2 {
+        padding-top: 20px;
+    }
+
+    .featured p {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .featured div {
+        flex-direction: column;
+    }
+
+    .featured div figure {
+        width: 100%;
+    }
+
+    .contact {
+        flex-direction: column;
+        padding: 0 10px;
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    .contact article {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact article h2 {
+        text-align: center;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact form button {
+        width: 40%;
+    }
+
+    /* Footer */
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer p { 
+        width: 100%;
+        font-size: 10px;
+    }
+
+    footer p:nth-of-type(2) {
+        text-align: left;
+    }
+
+    footer nav {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    footer nav a {
+        padding: 0;
+    }
+
 }
